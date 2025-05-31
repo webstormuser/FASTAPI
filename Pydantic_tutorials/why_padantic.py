@@ -60,8 +60,8 @@ def update_patient_data(patient: Patient):
     print('updated')
 
 # Create a dictionary with patient information.
-# Note that 'age' is a string '30' here, but Pydantic will coerce it to an int due to the model's type hint.
-patient_info = {'name':'Ashwini', 'email':'abc@gmail.com', 'linkedin_url':'http://linkedin.com/1225', 'age': '30', 'weight': 58,'contact_details':{'phone':'2353462'}}
+# CORRECTED: 'allergies' is now a list of strings.
+patient_info = {'name':'Ashwini', 'email':'abc@gmail.com', 'linkedin_url':'http://linkedin.com/1225', 'age': '30', 'weight': 58,'allergies':['eating banana'],'contact_details':{'phone':'2353462'}}
 
 # Create an instance of the 'Patient' model using the 'patient_info' dictionary.
 # Pydantic validates the data against the 'Patient' model's rules during instantiation.
